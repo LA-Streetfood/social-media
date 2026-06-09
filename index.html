@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LA Streetfood</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Montserrat:wght@700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Achtergrond foto */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background-image: url('achtergrond.jpg.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    /* Licht crème overlay zodat knoppen goed leesbaar zijn */
+    .bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(242, 220, 170, 0.55);
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 430px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 22px 56px;
+      gap: 12px;
+    }
+
+    /* Logo */
+    .logo-wrap {
+      width: 100%;
+      margin-bottom: 6px;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Slogan */
+    .slogan {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #1B503C;
+      text-align: center;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    /* Knoppen */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: transform 0.14s ease, box-shadow 0.14s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background-color: #1B503C;
+      color: #F2E0B6;
+      box-shadow: 0 4px 18px rgba(27, 80, 60, 0.35);
+    }
+
+    .btn-primary:hover {
+      background-color: #1e5c45;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 24px rgba(27, 80, 60, 0.45);
+    }
+
+    .btn-outline {
+      background-color: rgba(242, 224, 182, 0.75);
+      color: #1B503C;
+      border: 1.5px solid #1B503C;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(242, 224, 182, 0.92);
+      transform: translateY(-2px);
+    }
+
+    .btn-label {
+      flex: 1;
+      text-align: center;
+    }
+
+    .btn-arrow {
+      font-size: 14px;
+      opacity: 0.4;
+    }
+
+    .footer {
+      display: block;
+      margin-top: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(27, 80, 60, 0.4);
+      text-decoration: none;
+    }
+
+    .footer:hover {
+      color: rgba(27, 80, 60, 0.7);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <div class="container">
+
+    <div class="logo-wrap">
+      <img
+        src="logo LA.png"
+        alt="LA Streetfood"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+      />
+      <span style="display:none; color:#1B503C; font-family:'Playfair Display',serif; font-size:24px; font-weight:700;">LA Streetfood</span>
+    </div>
+
+    <p class="slogan">Wij importeren zodat jij je kan onderscheiden</p>
+
+    <a href="https://www.la-streetfood.com/nl/webshop" class="btn btn-primary" target="_blank" rel="noopener">
+      <span class="btn-label">Webshop</span>
+      <span class="btn-arrow">↗</span>
+    </a>
+
+    <a href="https://www.la-streetfood.com/nl/contact" class="btn btn-outline" target="_blank" rel="noopener">
+      <span class="btn-label">Sample aanvragen</span>
+      <span class="btn-arrow">↗</span>
+    </a>
+
+    <a href="https://www.la-streetfood.com/nl/recepten" class="btn btn-outline" target="_blank" rel="noopener">
+      <span class="btn-label">Recepten</span>
+      <span class="btn-arrow">↗</span>
+    </a>
+
+    <a href="https://www.la-streetfood.com/nl/nieuws" class="btn btn-outline" target="_blank" rel="noopener">
+      <span class="btn-label">Nieuws</span>
+      <span class="btn-arrow">↗</span>
+    </a>
+
+    <a href="https://www.la-streetfood.com/nl/contact" class="btn btn-outline" target="_blank" rel="noopener">
+      <span class="btn-label">Contact</span>
+      <span class="btn-arrow">↗</span>
+    </a>
+
+    <a href="https://www.la-streetfood.com/nl" class="footer" target="_blank" rel="noopener">la-streetfood.com</a>
+
+  </div>
+</body>
+</html>
