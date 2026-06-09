@@ -131,6 +131,34 @@
       font-size: 14px;
       opacity: 0.4;
     }
+        /* Taalvlaggetjes */
+    .flags {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .flags a {
+      display: inline-flex;
+      line-height: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(27, 80, 60, 0.3);
+      border: 1.5px solid rgba(27, 80, 60, 0.55);
+      transition: transform 0.14s ease, box-shadow 0.14s ease;
+    }
+
+    .flags a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(27, 80, 60, 0.4);
+    }
+
+    .flags svg {
+      width: 40px;
+      height: auto;
+      display: block;
+    }
 
     .footer {
       display: block;
@@ -166,33 +194,54 @@
 
     <p class="slogan">Wij importeren zodat jij je kan onderscheiden</p>
 
-    <a href="https://www.la-streetfood.com/nl/webshop" class="btn btn-primary" target="_blank" rel="noopener">
+    <a href="https://www.la-streetfood.com/nl/producten?utm_source=bio&utm_id=instagram" class="btn btn-primary" target="_blank" rel="noopener">
       <span class="btn-label">Webshop</span>
       <span class="btn-arrow">↗</span>
     </a>
 
-    <a href="https://www.la-streetfood.com/nl/contact" class="btn btn-outline" target="_blank" rel="noopener">
+    <a href="https://www.la-streetfood.com/nl/contact?utm_source=bio&utm_id=instagram" class="btn btn-outline" target="_blank" rel="noopener">
       <span class="btn-label">Sample aanvragen</span>
       <span class="btn-arrow">↗</span>
     </a>
 
-    <a href="https://www.la-streetfood.com/nl/recepten" class="btn btn-outline" target="_blank" rel="noopener">
+    <a href="https://www.la-streetfood.com/nl/recepten?utm_source=bio&utm_id=instagram" class="btn btn-outline" target="_blank" rel="noopener">
       <span class="btn-label">Recepten</span>
       <span class="btn-arrow">↗</span>
     </a>
 
-    <a href="https://www.la-streetfood.com/nl/nieuws" class="btn btn-outline" target="_blank" rel="noopener">
+    <a href="https:www.la-streetfood.com/nl/nieuws?utm_source=bio&utm_id=instagram" class="btn btn-outline" target="_blank" rel="noopener">
       <span class="btn-label">Nieuws</span>
       <span class="btn-arrow">↗</span>
     </a>
 
-    <a href="https://www.la-streetfood.com/nl/contact" class="btn btn-outline" target="_blank" rel="noopener">
+    <a href="https://www.la-streetfood.com/nl/contact?utm_source=bio&utm_id=instagram" class="btn btn-outline" target="_blank" rel="noopener">
       <span class="btn-label">Contact</span>
       <span class="btn-arrow">↗</span>
     </a>
+    <div class="flags">
+      <a href="https://www.la-streetfood.com/en?utm_source=bio&utm_id=instagram" target="_blank" rel="noopener" aria-label="English website" title="English">
+        <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+          <clipPath id="uk-s"><rect width="60" height="30"/></clipPath>
+          <clipPath id="uk-t"><path d="M30,15 L60,0 H60 z M30,15 L60,30 H60 z M30,15 L0,30 H0 z M30,15 L0,0 H0 z"/></clipPath>
+          <g clip-path="url(#uk-s)">
+            <rect width="60" height="30" fill="#012169"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/>
+            <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/>
+            <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/>
+          </g>
+        </svg>
+      </a>
 
-    <a href="https://www.la-streetfood.com/nl" class="footer" target="_blank" rel="noopener">la-streetfood.com</a>
-
+      <a href="https://www.la-streetfood.com/fr?utm_source=bio&utm_id=instagram" target="_blank" rel="noopener" aria-label="Site web français" title="Français">
+        <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+          <rect width="20" height="30" x="0" fill="#0055A4"/>
+          <rect width="20" height="30" x="20" fill="#FFFFFF"/>
+          <rect width="20" height="30" x="40" fill="#EF4135"/>
+        </svg>
+      </a>
+    </div>
+    <a href="https://www.la-streetfood.com/nl" class="footer" target="_blank" rel="noopener">la-streetfood.com?utm_source=bio&utm_id=instagram</a>
   </div>
 </body>
 </html>
